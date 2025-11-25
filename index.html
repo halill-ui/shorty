@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shorty</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family:Arial; text-align:center; padding:20px; }
+    h1 { font-size:50px; color:#00ff41; margin:20px 0; }
+    p { font-size:22px; margin:30px 0; opacity:0.9; }
+    .box { border:4px dashed #00ff41; padding:100px 20px; border-radius:30px; margin:50px auto; max-width:500px; cursor:pointer; }
+    button { background:#00ff41; color:#000; border:none; padding:20px 60px; font-size:28px; font-weight:bold; border-radius:50px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h1>Shorty</h1>
+  <p>Film, dizi, YouTube videosu…<br>1 tıkla 15-120 saniyelik Short/Reel yap!</p>
+  <div class="box" onclick="document.getElementById('file').click()">
+    📱 VİDEOYU BURAYA SÜRÜKLE VEYA TIKLA
+    <input type="file" id="file" accept="video/*" style="display:none">
+  </div>
+  <button onclick="alert('Shorty hazır kanka! 🔥 Gerçek kesme çok yakında geliyor')">KES VE İNDİR</button>
+</body>
+</html>
