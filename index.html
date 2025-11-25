@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DikeyKes – Film/Video Kesici</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <div class="container">
+    <h1>DikeyKes</h1>
+    <p>Videoyu sürükle-bırak, 15sn-2dk arası klipler hazır olsun!</p>
+
+    <div id="drop-area">
+      <p>📱 Buraya videoyu sürükle veya tıkla</p>
+      <input type="file" id="video-input" accept="video/*">
+    </div>
+
+    <div id="options" class="hidden">
+      <label>
+        Klip süresi: <span id="sec">60</span>s
+        <input type="range" id="duration" min="15" max="120" value="60">
+      </label>
+
+      <label>
+        Format:
+        <select id="format">
+          <option value="9:16">Dikey (TikTok/Reels)</option>
+          <option value="16:9">Yatay (YouTube)</option>
+          <option value="1:1">Kare</option>
+        </select>
+      </label>
+
+      <button id="start">KES VE İNDİR</button>
+    </div>
+
+    <div id="progress" class="hidden">
+      <p>İşleniyor: <span id="percent">0</span>%</p>
+      <progress id="bar" value="0" max="100"></progress>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
